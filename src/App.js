@@ -57,24 +57,24 @@ export function SearchBox(props) {
   }, [query, inputValue]);
 
   return (
-    <div className="">
+    <div className="bg-blue-800">
       <form
         action=""
-        className=" bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        className="   rounded px-8 pt-6 pb-8"
         noValidate
         onSubmit={handleSubmit}
         onReset={handleReset}
       >
-        <div class="mb-4">
+        <div class="">
           <label
-            class="block text-gray-700 text-sm font-bold mb-2 text-center"
+            class="block text-white text-sm mb-3 font-bold  text-center"
             for="username"
           >
             Search actors
           </label>
           <input
             ref={inputRef}
-            className="ais-SearchBox-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="ais-SearchBox-input shadow appearance-none border rounded w-full pt-3 pb-3  px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             autoComplete="off"
             autoCorrect="off"
             autoCapitalize="off"
@@ -95,7 +95,7 @@ export function Hits({ hitComponent: Hit }) {
   const { hits } = useHits();
 
   return (
-    <div className="bg-cover bg-[url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100')]  min-h-screen w-full flex justify-center items-center">
+    <div className="bg-cover bg-gradient-to-r from-rose-400 to-blue-500 min-h-screen w-full flex justify-center items-center">
       <section className="py-20 w-[80%] min-h-[800px] ml-auto mr-auto">
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap mx-auto  mb-12">

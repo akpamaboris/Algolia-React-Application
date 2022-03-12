@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <section className="py-5 bg-gray-500">
+    <section className="py-5 bg-blue-500">
       <div className="container  mx-auto">
         <div className="flex flex-wrap -mx-4 mb-16  border-gray-400"></div>
         <div className="md:flex justify-between">
