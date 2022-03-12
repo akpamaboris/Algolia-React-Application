@@ -14,7 +14,7 @@ const searchClient = algoliasearch(
 );
 
 export function SearchBox(props) {
-  const { query, refine, isSearchStalled } = useSearchBox(props);
+  const { query, refine } = useSearchBox(props);
   const [inputValue, setInputValue] = useState(query);
   const inputRef = useRef(null);
 
@@ -95,24 +95,26 @@ export function Hits({ hitComponent: Hit }) {
   const { hits } = useHits();
 
   return (
-    <section className="py-20 w-[80%] min-h-[800px] ml-auto mr-auto">
-      <div className="container px-4 mx-auto">
-        <div className="flex flex-wrap mx-auto  mb-12">
-          {hits.map((hit) => (
-            <Hit hit={hit} />
-          ))}
+    <div className="bg-cover bg-[url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100')]  min-h-screen w-full flex justify-center items-center">
+      <section className="py-20 w-[80%] min-h-[800px] ml-auto mr-auto">
+        <div className="container px-4 mx-auto">
+          <div className="flex flex-wrap mx-auto  mb-12">
+            {hits.map((hit) => (
+              <Hit hit={hit} />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
 
 function Hit({ hit }) {
   return (
-    <div className="w-full md:w-[45%] lg:w-[30%] px-4 mb-8 ml-auto mr-auto p-6 bg-gray-200 rounded-lg">
+    <div className="w-full md:w-[45%] lg:w-[30%] px-4 mb-8 ml-auto mr-auto p-6 bg-white bg-opacity-40 backdrop-filter backdrop-blur-lg rounded-lg">
       <article className="">
-        <h1>{hit.name}</h1>
-        <p>{hit.rating}</p>
+        <h1 className="text-center text-white font-semibold">{hit.name}</h1>
+        <p className="text-center mt-5">Rating : {hit.rating}</p>
       </article>
     </div>
   );
