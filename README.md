@@ -12,3 +12,4 @@ I have designed the UI getting inspired by the glassmorphism trend.
 #### -You can search
 #### -You can display the actor names with the ratings they have
 #### -It is based on the IMDB API
+#### -I have used framer-motion to add animation to the interface
